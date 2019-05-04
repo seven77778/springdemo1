@@ -1,0 +1,41 @@
+Type Exception Report
+
+Message Error instantiating servlet class [org.springframework.web.servlet.DispatcherServlet]
+
+Description The server encountered an unexpected condition that prevented it from fulfilling the request.
+
+Exception
+
+javax.servlet.ServletException: Error instantiating servlet class [org.springframework.web.servlet.DispatcherServlet]
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:748)
+Root Cause
+
+java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
+	org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1328)
+	org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1156)
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:748)
+Note The full stack trace of the root cause is available in the server logs.

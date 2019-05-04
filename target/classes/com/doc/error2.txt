@@ -1,0 +1,5 @@
+注意控制台
+server没报错，tomcat localhostlog已经报错
+
+ java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
+
