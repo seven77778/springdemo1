@@ -10,10 +10,11 @@
         <welcome-file>index.jsp</welcome-file> <!--之前配置的是在 web-inf下面，路径不对-->
     </welcome-file-list>
 
-    <!--listener删了之后，项目正常启动 ？？-->
-    <!--<listener>-->
-        <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
-    <!--</listener>-->
+    <!--listener删了之后，项目正常启动 ？？todo -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

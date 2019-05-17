@@ -1,5 +1,17 @@
-注意控制台
+1.注意控制台
 server没报错，tomcat localhostlog已经报错
 
  java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
 
+通过 idea 设置 引入lib什么的 ，反正是jar加载问题
+
+-- tomcat 需要加载到jar 放入tomcat lib包也行
+
+2. 加上
+ <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+之后，启动时开始寻找  applicationContext.xml，手动放在out的WEB-INF下面才OK
+那么应该放在哪里，才会自动出现到 out 目录下面
+
+-- ContextLoaderListener 应该会去读取 applicationContext.xml

@@ -1,0 +1,8 @@
+1. context.getBean("multipartResolver", MultipartResolver.class)
+
+see  ApplicationContext context  =new ClassPathXmlApplicationContext("file:D:\\MySpringBoot\\springdemo1\\web\\WEB-INF\\applicationContext.xml");
+
+            MyDispatcherServlet myDispatcherServlet = context.getBean("myDispatcherServlet",MyDispatcherServlet.class);
+            System.out.println(myDispatcherServlet.name);
+
+2. onRefresh ∫Œ ±÷¥––
