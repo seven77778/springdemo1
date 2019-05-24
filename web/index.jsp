@@ -11,6 +11,6 @@
     <title>123</title>
   </head>
   <body>
-  This is Spring MVC ~
+  This is Spring MVC ~ Nginx -tomcat2
   </body>
 </html>
