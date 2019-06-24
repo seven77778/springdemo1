@@ -8,24 +8,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by lsh on 2019-05-10.
  *
- * springlearn ¸÷ÖÖÆô¶¯·½Ê½
+ * springlearn ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
  *
- * applicationContext.xml ·Å resources ²ÅºÃÊ¹
+ * applicationContext.xml ï¿½ï¿½ resources ï¿½Åºï¿½Ê¹
  *
- * 1.ApplicationContext ¼Ì³ÐÁË ListableBeanFactory£¬Õâ¸ö Listable µÄÒâË¼¾ÍÊÇ£¬
- * Í¨¹ýÕâ¸ö½Ó¿Ú£¬ÎÒÃÇ¿ÉÒÔ»ñÈ¡¶à¸ö Bean£¬×î¶¥²ã BeanFactory ½Ó¿ÚµÄ·½·¨¶¼ÊÇ»ñÈ¡µ¥¸ö Bean µÄ¡£
+ * 1.ApplicationContext ï¿½Ì³ï¿½ï¿½ï¿½ ListableBeanFactoryï¿½ï¿½ï¿½ï¿½ï¿½ Listable ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½ï¿½Ç£ï¿½
+ * Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½Ô»ï¿½È¡ï¿½ï¿½ï¿½ Beanï¿½ï¿½ï¿½î¶¥ï¿½ï¿½ BeanFactory ï¿½Ó¿ÚµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½È¡ï¿½ï¿½ï¿½ï¿½ Bean ï¿½Ä¡ï¿½
  *
- * 2.ApplicationContext ¼Ì³ÐÁË HierarchicalBeanFactory£¬Hierarchical µ¥´Ê±¾ÉíÒÑ¾­ÄÜËµÃ÷ÎÊÌâÁË£¬
- * Ò²¾ÍÊÇËµÎÒÃÇ¿ÉÒÔÔÚÓ¦ÓÃÖÐÆð¶à¸ö BeanFactory£¬È»ºó¿ÉÒÔ½«¸÷¸ö BeanFactory ÉèÖÃÎª¸¸×Ó¹ØÏµ
+ * 2.ApplicationContext ï¿½Ì³ï¿½ï¿½ï¿½ HierarchicalBeanFactoryï¿½ï¿½Hierarchical ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½
+ * Ò²ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ BeanFactoryï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ï¿½ BeanFactory ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ó¹ï¿½Ïµ
  *
- * 3.AutowireCapableBeanFactory Õâ¸öÃû×ÖÖÐµÄ Autowire ´ó¼Ò¶¼·Ç³£ÊìÏ¤£¬Ëü¾ÍÊÇÓÃÀ´×Ô¶¯×°Åä Bean ÓÃµÄ£¬
- * µ«ÊÇ×ÐÏ¸¿´ÉÏÍ¼£¬ApplicationContext ²¢Ã»ÓÐ¼Ì³ÐËü£¬²»¹ý²»ÓÃµ£ÐÄ£¬²»Ê¹ÓÃ¼Ì³Ð£¬²»´ú±í²»¿ÉÒÔÊ¹ÓÃ×éºÏ£¬
- * Èç¹ûÄã¿´µ½ ApplicationContext ½Ó¿Ú¶¨ÒåÖÐµÄ×îºóÒ»¸ö·½·¨ getAutowireCapableBeanFactory() ¾ÍÖªµÀÁË
+ * 3.AutowireCapableBeanFactory ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Autowire ï¿½ï¿½Ò¶ï¿½ï¿½Ç³ï¿½ï¿½ï¿½Ï¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½×°ï¿½ï¿½ Bean ï¿½ÃµÄ£ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ApplicationContext ï¿½ï¿½Ã»ï¿½Ð¼Ì³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ê¹ï¿½Ã¼Ì³Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ï£ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ã¿´ï¿½ï¿½ ApplicationContext ï¿½Ó¿Ú¶ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ getAutowireCapableBeanFactory() ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½
  *
- * 4.ConfigurableListableBeanFactory Ò²ÊÇÒ»¸öÌØÊâµÄ½Ó¿Ú£¬
- * ¿´Í¼£¬ÌØÊâÖ®´¦ÔÚÓÚËü¼Ì³ÐÁËµÚ¶þ²ãËùÓÐµÄÈý¸ö½Ó¿Ú£¬¶ø ApplicationContext Ã»ÓÐ¡£ÕâµãÖ®ºó»áÓÃµ½
+ * 4.ConfigurableListableBeanFactory Ò²ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Ó¿Ú£ï¿½
+ * ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ï¿½ËµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ ApplicationContext Ã»ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½Ãµï¿½
  *
- * then BeanFactory¡¢ListableBeanFactory¡¢HierarchicalBeanFactory¡¢AutowireCapableBeanFactory¡¢ApplicationContext Õâ¼¸¸ö½Ó¿ÚµÄ´úÂë
+ * then BeanFactoryï¿½ï¿½ListableBeanFactoryï¿½ï¿½HierarchicalBeanFactoryï¿½ï¿½AutowireCapableBeanFactoryï¿½ï¿½ApplicationContext ï¿½â¼¸ï¿½ï¿½ï¿½Ó¿ÚµÄ´ï¿½ï¿½ï¿½
  *
  * see  https://blog.csdn.net/nuomizhende45/article/details/81158383
  *

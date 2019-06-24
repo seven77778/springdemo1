@@ -5,4 +5,4 @@ see  ApplicationContext context  =new ClassPathXmlApplicationContext("file:D:\\M
             MyDispatcherServlet myDispatcherServlet = context.getBean("myDispatcherServlet",MyDispatcherServlet.class);
             System.out.println(myDispatcherServlet.name);
 
-2. onRefresh ºÎÊ±Ö´ÐÐ
+2. onRefresh ä½•æ—¶æ‰§è¡Œ

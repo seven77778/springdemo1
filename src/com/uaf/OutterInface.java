@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 
 /**
- * ±êÖ¾ÊÇÍâ²¿½Ó¿Ú
+ * æ ‡å¿—æ˜¯å¤–éƒ¨æ¥å£
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

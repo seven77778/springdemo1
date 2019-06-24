@@ -1,20 +1,20 @@
 package com.uaf;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-
 import javax.annotation.PostConstruct;
 import java.util.Map;
 
 /**
  * Created by lsh on 2019-05-17.
  *
- * Íâ²¿½Ó¿Ú ÔöÇ¿×é×°
+ * å¤–éƒ¨æ¥å£ å¢å¼ºç»„è£…
  *
- *
- * @Aspect:×÷ÓÃÊÇ°Ñµ±Ç°Àà±êÊ¶ÎªÒ»¸öÇĞÃæ¹©ÈİÆ÷¶ÁÈ¡
+ * @Aspect:ä½œç”¨æ˜¯æŠŠå½“å‰ç±»æ ‡è¯†ä¸ºä¸€ä¸ªåˆ‡é¢ä¾›å®¹å™¨è¯»å–
  *
  */
 
@@ -24,8 +24,8 @@ public class OutterAspect implements ApplicationContextAware {
     private ApplicationContext applicationContext;
 
     /**
-     * 1.Ö±½ÓÆô¶¯spring£¬@PostConstruct ²¢Î´Æô¶¯ todo
-     * 2.ClassPathXmlApplicationContext ¼ÓÔØ£¬Ò²Î´Æô¶¯
+     * 1.ç›´æ¥å¯åŠ¨springï¼Œ@PostConstruct å¹¶æœªå¯åŠ¨ todo
+     * 2.ClassPathXmlApplicationContext åŠ è½½ï¼Œä¹Ÿæœªå¯åŠ¨
      *
      */
     @PostConstruct
@@ -41,4 +41,16 @@ public class OutterAspect implements ApplicationContextAware {
         System.out.println("setApplicationContext");
         this.applicationContext = applicationContext;
     }
+
+
+    @Around("@annotation(OutterInface)")
+    public Object doAspect(final ProceedingJoinPoint pjp, OutterInface outterInface) throws Throwable{
+        System.out.println("doAspect");
+
+
+        return null;
+    }
+
+
+
 }

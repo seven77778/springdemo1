@@ -8,24 +8,24 @@ import org.springframework.web.context.ContextLoaderListener;
  *
  * @see org.springframework.web.servlet.DispatcherServlet
  *
- * HandlerMapping Â·ÓÉ
- * HandlerAdapter ÊÊÅäÆ÷
- * HandlerExceptionResolver Òì³£½âÎö²ßÂÔ
- * InternalResourceViewResolver ÄÚ²¿×ÊÔ´ÊÓÍ¼½âÎöÆ÷
+ * HandlerMapping è·¯ç”±
+ * HandlerAdapter é€‚é…å™¨
+ * HandlerExceptionResolver å¼‚å¸¸è§£æç­–ç•¥
+ * InternalResourceViewResolver å†…éƒ¨èµ„æºè§†å›¾è§£æå™¨
  *
- * RequestToViewNameTranslator ÇëÇóÊÓÍ¼×ª»»Æ÷
+ * RequestToViewNameTranslator è¯·æ±‚è§†å›¾è½¬æ¢å™¨
  *
- * MultipartResolver ´ó¶àÊıÇëÇó²ßÂÔ
- * LocaleResolver µØÇø½âÎöÆ÷
+ * MultipartResolver å¤§å¤šæ•°è¯·æ±‚ç­–ç•¥
+ * LocaleResolver åœ°åŒºè§£æå™¨
  *
- * ThemeResolver Ö÷Ìâ½âÎöÆ÷
+ * ThemeResolver ä¸»é¢˜è§£æå™¨
  *
  * ContextLoaderListener
  *
  * WebApplicationContext
  *
- * ¿´·½·¨£º
- * 1. initStrategies »á³õÊ¼»¯ÉÏÃæµÄ¸÷ÖÖbean 9¸ö
+ * çœ‹æ–¹æ³•ï¼š
+ * 1. initStrategies ä¼šåˆå§‹åŒ–ä¸Šé¢çš„å„ç§bean 9ä¸ª
  *
  *      initMultipartResolver(context);
  * 		initLocaleResolver(context);
@@ -37,19 +37,19 @@ import org.springframework.web.context.ContextLoaderListener;
  * 		initViewResolvers(context);
  * 		initFlashMapManager(context);
  *
- * 10 WEB_APPLICATION_CONTEXT_ATTRIBUTE ÊôĞÔÀ´±£´æwebÉÏÏÂÎÄ  doServiceÖĞ return is WebApplicationContext
+ * 10 WEB_APPLICATION_CONTEXT_ATTRIBUTE å±æ€§æ¥ä¿å­˜webä¸Šä¸‹æ–‡  doServiceä¸­ return is WebApplicationContext
  *
  *
  */
 
     /*
-    ThemeResolver Ö÷Ìâ½âÎöÆ÷
-    Ö÷Ìâ¾ÍÊÇÏµÍ³µÄÕûÌåÑùÊ½»ò·ç¸ñ£¬¿ÉÍ¨¹ıSpring MVC¿ò¼ÜÌá¹©µÄÖ÷Ìâ£¨theme£©ÉèÖÃÓ¦ÓÃµÄÕûÌåÑùÊ½·ç¸ñ£¬Ìá¸ßÓÃ»§ÌåÑé¡£
-    Spring MVCµÄÖ÷Ìâ¾ÍÊÇÒ»Ğ©¾²Ì¬×ÊÔ´µÄ¼¯ºÏ£¬¼´°üÀ¨ÑùÊ½¼°Í¼Æ¬£¬ÓÃÀ´¿ØÖÆÓ¦ÓÃµÄÊÓ¾õ·ç¸ñ¡£
+    ThemeResolver ä¸»é¢˜è§£æå™¨
+    ä¸»é¢˜å°±æ˜¯ç³»ç»Ÿçš„æ•´ä½“æ ·å¼æˆ–é£æ ¼ï¼Œå¯é€šè¿‡Spring MVCæ¡†æ¶æä¾›çš„ä¸»é¢˜ï¼ˆthemeï¼‰è®¾ç½®åº”ç”¨çš„æ•´ä½“æ ·å¼é£æ ¼ï¼Œæé«˜ç”¨æˆ·ä½“éªŒã€‚
+    Spring MVCçš„ä¸»é¢˜å°±æ˜¯ä¸€äº›é™æ€èµ„æºçš„é›†åˆï¼Œå³åŒ…æ‹¬æ ·å¼åŠå›¾ç‰‡ï¼Œç”¨æ¥æ§åˆ¶åº”ç”¨çš„è§†è§‰é£æ ¼ã€‚
      */
 
     /*
-    ContextLoaderListener Ó¦¸Ã»áÈ¥¶ÁÈ¡ applicationContext.xml todo
+    ContextLoaderListener åº”è¯¥ä¼šå»è¯»å– applicationContext.xml todo
      */
 
 public class MyDispatcherServlet {

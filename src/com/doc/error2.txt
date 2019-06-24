@@ -15,3 +15,6 @@ server没报错，tomcat localhostlog已经报错
 那么应该放在哪里，才会自动出现到 out 目录下面
 
 -- ContextLoaderListener 应该会去读取 applicationContext.xml
+
+3.   @Around("@annotation(OutterInface)") -- Unbound pointcut parameter 'outterInface'
+
